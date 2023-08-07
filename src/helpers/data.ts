@@ -1,5 +1,6 @@
-[
-  {
+
+const countriesData = [
+    {
     "name": "Afghanistan",
     "topLevelDomain": [".af"],
     "alpha2Code": "AF",
@@ -16822,3 +16823,6 @@
     "independent": true
   }
 ]
+
+
+export default countriesData
