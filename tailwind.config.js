@@ -12,6 +12,7 @@ export default {
      'l-gray-input': 'hsl(0, 0%, 52%)',
      'l-gray-bg': 'hsl(0, 0%, 98%)',
      'white': 'hsl(0, 0%, 100%)',
+     'error': 'hsl(0, 100%, 63%)',
     },
     extend: {},
     fontFamily: {
