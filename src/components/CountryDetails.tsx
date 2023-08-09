@@ -29,7 +29,7 @@ export const CountryDetails = ({ alphacode }: any) => {
                     <p>Languages: <span className="font-extralight">{languages[0].name}</span></p>
                     <p>Border Countries: <div className="font-normal flex flex-wrap gap-3 mt-2">{borders ? borders.map(border => {
                         return (
-                            <Link href={`/${border}`} className="p-2 shadow-md cursor-pointer text-center hover:underline bg-d-blue">{border}</Link>
+                            <Link href={`/${border}`} className="p-2 shadow-md cursor-pointer text-center hover:underline dark:bg-d-blue">{border}</Link>
                         )
                     }) : " No borders"}</div></p>
                     </div>

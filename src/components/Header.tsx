@@ -13,11 +13,11 @@ export const Header = ({ handleTheme, DarkMode }: HeaderProps) => {
                 {DarkMode
                     ?
                     <>
-                        <LightModeIcon />  <h4 className="font-light">Light Mode</h4>
+                        <LightModeIcon />  <h4 className="font-light hover:underline">Light Mode</h4>
                     </>
                     :
                     <>
-                        <DarkModeIcon />   <h4 className="font-light">Dark Mode</h4>
+                        <DarkModeIcon />   <h4 className="font-light hover:underline">Dark Mode</h4>
                     </>
                 }
             </button>
