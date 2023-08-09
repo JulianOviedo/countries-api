@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export const Header = ({ handleTheme, DarkMode }: HeaderProps) => {
     return (
-        <header className="flex justify-between px-4 py-8 shadow-md bg-white z-10 relative dark:bg-d-blue dark:text-white transition-colors duration-500">
+        <header className="flex justify-between px-4 py-8 shadow-md bg-white z-10 relative dark:bg-d-blue dark:text-white transition-colors duration-500 md:px-20 md:text-xl">
             <h1 className="font-bold">Where in the world ?</h1>
             <button className="flex text-center items-center gap-2 cursor-pointer" onClick={handleTheme}>
                 {DarkMode

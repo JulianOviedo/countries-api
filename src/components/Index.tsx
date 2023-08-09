@@ -49,11 +49,14 @@ export const Index = () => {
     }
 
     return (
-        <main className="bg-l-gray-bg z-0 min-h-screen px-4 py-8 relative transition-colors duration-500 dark:bg-d-blue-bg dark:text-white" >
+        <main className="bg-l-gray-bg z-0 min-h-screen px-4 py-8 relative transition-colors duration-500 dark:bg-d-blue-bg dark:text-white md:px-20" >
+            <div className="md:flex md:flex-row md:justify-between md:gap-10">
+            <div>
             <LensIcon />
-            <input type="text" className="shadow-md rounded h-16 p-4 pl-20 w-full dark:bg-d-blue dark:text-white transition-colors" placeholder="Search for a country..." onChange={handleSearchInput} />
+            <input type="text" className="shadow-md rounded h-16 p-4 pl-20 w-full dark:bg-d-blue dark:text-white transition-colors md:min-w-[500px] lg:min-w-[700px]" placeholder="Search for a country..." onChange={handleSearchInput} />
             {Error && <p className="text-center text-error m-2">{Error}</p>}
-            <button className=" relative flex justify-between p-4 items-center bg-white shadow-md mt-10 rounded h-16 w-64 font-light dark:bg-d-blue" onClick={handleDropDown}>
+            </div>
+            <button className=" relative flex justify-between p-4 items-center bg-white shadow-md mt-10 rounded h-16 w-64 font-light dark:bg-d-blue md:m-0" onClick={handleDropDown}>
                 {FilterBy}
                 <Dropdown />
                 {
@@ -71,13 +74,14 @@ export const Index = () => {
                         : null
                 }
             </button>
+            </div>
 
-            <div className="grid grid-cols-1 justify-center items-center justify-items-center gap-6">
+            <div className="grid grid-cols-1 justify-center items-center justify-items-center gap-6 md:flex md:flex-wrap md:gap-12 md:mt-10 md:justify-start">
                 {Countries.map(country => {
                     return (
-                        <article key={country.name} className="w-[80%] rounded-xl bg-white shadow-md mt-6 cursor-pointer dark:bg-d-blue ">
+                        <article key={country.name} className="w-[80%] rounded-xl bg-white shadow-md mt-6 cursor-pointer dark:bg-d-blue md:w-80 md:h-[450px] hover:shadow-l-gray-input">
                             <Link href={`/${country.alpha3Code}`}>
-                                <img className="rounded-t-xl" src={country.flag} />
+                                <img className="rounded-t-xl md:h-[220px] object-cover w-full" src={country.flag} />
                                 <h1 className="font-bold text-2xl m-8 ml-10">{country.name}</h1>
                                 <section className="ml-10 mb-10">
                                     <h4>Population: <span className="font-extralight"> {country.population}</span></h4>
