@@ -15,6 +15,10 @@ export default {
      'error': 'hsl(0, 100%, 63%)',
     },
     extend: {},
+    gridTemplateColumns:{
+      '16': 'repeat(auto-fit, minmax(16rem, 1fr))',
+      '2' : 'repeat(2, minmax(0, 1fr))'
+    },
     fontFamily: {
       primary: "'Nunito Sans', sans-serif"
     }

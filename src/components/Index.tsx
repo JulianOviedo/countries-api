@@ -73,10 +73,10 @@ export const Index = () => {
                         </span>
                         : null
                 }
-            </button>
+            </button>   
             </div>
 
-            <div className="grid grid-cols-1 justify-center items-center justify-items-center gap-6 md:flex md:flex-wrap md:gap-12 md:mt-10 md:justify-start">
+            <div className="grid grid-cols-1 md:grid-cols-16 justify-center items-center justify-items-center md:justify-items-start gap-6 md:grid- md:gap-20 md:mt-10 md:justify-start">
                 {Countries.map(country => {
                     return (
                         <article key={country.name} className="w-[80%] rounded-xl bg-white shadow-md mt-6 cursor-pointer dark:bg-d-blue md:w-80 md:h-[450px] hover:shadow-l-gray-input">
