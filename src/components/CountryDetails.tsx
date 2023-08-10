@@ -18,9 +18,9 @@ export const CountryDetails = ({ alphacode }: any) => {
             {country
                 &&
                 <div key={name} className="px-4 py-8">
-                    <div className="lg:flex lg:flex-row lg:mt-20 lg:justify-between">
+                    <div className="xl:flex xl:flex-row lg:mt-20 lg:justify-between">
                         <img className="lg:w-[600px] lg:h-[450px] lg:mr-6" src={flag} alt={name} />
-                        <div className="lg:flex lg:flex-col lg:justify-center">
+                        <div className="lg:flex lg:flex-col lg:justify-center ">
                             <h1 className="font-bold text-2xl my-6">{name}</h1>
                             <div className="flex flex-col gap-2 lg:grid lg:grid-cols-2 lg:gap-4 lg:text-lg">
                                 <p>Population: <span className="font-extralight">{population}</span></p>
@@ -29,12 +29,12 @@ export const CountryDetails = ({ alphacode }: any) => {
                                 <p>Top Level Domain:  <span className="font-extralight">{topLevelDomain}</span></p>
                                 <p>Currencies: <span className="font-extralight">{currencies ? currencies[0].name : " No currencies"}</span></p>
                                 <p>Languages: <span className="font-extralight">{languages[0].name}</span></p>
-                                <p>Border Countries: <div className="font-normal flex flex-wrap gap-3 mt-2">{borders ? borders.map(border => {
+                                </div>  
+                                <p className="mt-4 lg:text-lg">Border Countries: <span className="font-normal flex flex-wrap gap-3 mt-4 lg:w-[600px] ">{borders ? borders.map(border => {
                                     return (
-                                        <Link href={`/${border}`} className="p-2 shadow-md cursor-pointer text-center dark:bg-d-blue hover:shadow-l-gray-input">{border}</Link>
+                                        <Link key={border} href={`/${border}`} className="p-2 shadow-md cursor-pointer text-center dark:bg-d-blue hover:shadow-l-gray-input">{border}</Link>
                                     )
-                                }) : " No borders"}</div></p>
-                            </div>
+                                }) : " No borders"}</span></p>
                         </div>
                     </div>
                 </div>
