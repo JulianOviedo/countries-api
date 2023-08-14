@@ -19,7 +19,7 @@ export const CountryDetails = ({ alphacode }: any) => {
                 &&
                 <div key={name} className="px-4 py-8">
                     <div className="xl:flex xl:flex-row lg:mt-20 lg:justify-between">
-                        <img className="lg:w-[600px] lg:h-[450px] lg:mr-6 shadow-md" src={flag} alt={name} />
+                        <img className="lg:w-[600px] lg:h-[450px] lg:mr-6 shadow-2xl object-cover" src={flag} alt={name} />
                         <div className="lg:flex lg:flex-col lg:justify-center ">
                             <h1 className="font-bold text-2xl my-6">{name}</h1>
                             <div className="flex flex-col gap-2 lg:grid lg:grid-cols-2 lg:gap-4 lg:text-lg">
